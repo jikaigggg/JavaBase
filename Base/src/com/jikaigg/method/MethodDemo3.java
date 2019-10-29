@@ -10,5 +10,6 @@ import java.sql.Struct;
 public class MethodDemo3 {
     public static void main(String[] args) {
         Student s = new Student();
+        Student s1 = new Student("yaojikai",18);
     }
 }
