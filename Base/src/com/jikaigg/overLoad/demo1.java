@@ -27,7 +27,7 @@ public class demo1 {
     }
 
     //打印制定次数的helloworld
-    public static void print(int x){
+    public static void print(int x) {
         for (int i = 0; i < x; i++) {
             System.out.println("HelloWorld");
         }
