@@ -27,8 +27,6 @@ public class ArrayListDemo1 {
         // 错误写法，泛型规定了数组中必须全部都是String类型的数据
         // l.add(100);
         System.out.println(l);
-
-
     }
 
 }
