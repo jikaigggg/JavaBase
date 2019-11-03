@@ -18,12 +18,16 @@ public class ScannerDemo1 {
         Scanner s1 = new Scanner(System.in);  // System.in代表从键盘输入
 
         // 获取键盘中输入的数字
-        int num = s1.nextInt();
-        System.out.println(num);
+        /*int num = s1.nextInt();
+        System.out.println(num);*/
 
-        // 获取键盘中输入的字符串
-        String str = s1.next();
-        System.out.println(str);
+        // 获取键盘中输入的字符串，因为Scanner的next默认匹配的是空格和换行符
+        // String str = s1.next();
+        // System.out.println(str);
+        // 如果接受用户输入空格需要记入一行代码
+        s1.useDelimiter("\n");
+        String str1 = s1.next();
+        System.out.println(str1);
     }
 
 }
