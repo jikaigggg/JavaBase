@@ -22,5 +22,4 @@ public class StringDemo8 {
         }
         return s1;
     }
-
 }

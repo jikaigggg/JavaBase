@@ -19,6 +19,4 @@ public class ArrayDemo8 {
         Arrays.sort(array);
         System.out.println(Arrays.toString(array));
     }
-
-
 }
