@@ -1,4 +1,5 @@
 package com.jikaigg.method;
+
 /*
  * 构造方法：
  *   专门用来创建对象的方法，当我们通过关键字new来创建对象时，其实就是在调用构造方法
@@ -16,15 +17,17 @@ package com.jikaigg.method;
  * */
 public class Student {
     //无参数的构造方法
-    public Student(){
+    public Student() {
         System.out.println("构造方法执行了！");
     }
+
     //有参数的构造方法
-    public Student(String name,int age){
+    public Student(String name, int age) {
         System.out.println("有参的构造方法执行了！！");
         this.name = name;
         this.age = age;
     }
+
     private String name;
     private int age;
     private boolean male;//是否为男的

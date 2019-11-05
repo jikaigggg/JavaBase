@@ -24,19 +24,18 @@ public class StringDemo1 {
         String s1 = new String();
         System.out.println("第一个字符串：" + s1);
 
-        //根据字符数组创建,注意char[]数组里的元素一定要用单引号
+        // 根据字符数组创建,注意char[]数组里的元素一定要用单引号
         char[] charArray = {'y', 'j', 'k'};
         String s2 = new String(charArray);
         System.out.println("第二个字符串：" + s2);
 
-        //使用字节数组创建字符串,字符串的底层用的就是用字节数组创建字符串
+        // 使用字节数组创建字符串,字符串的底层用的就是用字节数组创建字符串
         byte[] byteArray = {97, 98, 99};
         String s3 = new String(byteArray);
         System.out.println("第三个字符串：" + s3);
 
-        //直接创建
+        // 直接创建
         String s4 = "hello!";
         System.out.println("第四个字符串：" + s4);
     }
-
 }

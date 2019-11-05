@@ -15,11 +15,16 @@ public class MethodDemo1 {
         System.out.println("yaojikai1");
     }
 
+    //打印调用
+    public static int crayon5(int d) {
+        return d;
+    }
+
+    //赋值调用
     public static void crayon2(int a) {
         System.out.println("参数为：" + a);
     }
 
-    //打印调用
     public static int crayon3() {
         return 5;
     }
@@ -30,10 +35,5 @@ public class MethodDemo1 {
 
     public static String crayon5(String c) {
         return c;
-    }
-
-    //赋值调用
-    public static int crayon5(int d) {
-        return d;
     }
 }

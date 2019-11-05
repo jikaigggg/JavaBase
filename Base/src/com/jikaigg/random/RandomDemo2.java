@@ -5,7 +5,6 @@ public class RandomDemo2 {
         for (int i = 0; i < 20; i++) {
             int a = new OneToTen().getRandom(10);
             System.out.println(a);
-
         }
     }
 }

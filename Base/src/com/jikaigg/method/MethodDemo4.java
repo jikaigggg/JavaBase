@@ -5,9 +5,9 @@ public class MethodDemo4 {
         Student1 ss = new Student1();
         ss.setName("黄家驹");
         ss.setAge(55);
-        System.out.println("姓名："+ss.getName()+"   年龄："+ss.getAge());
+        System.out.println("姓名：" + ss.getName() + "   年龄：" + ss.getAge());
         Student1 ss1 = new Student1("黄家驹", 50);
-        System.out.println("姓名："+ss1.getName()+"   年龄："+ss1.getAge());
+        System.out.println("姓名：" + ss1.getName() + "   年龄：" + ss1.getAge());
     }
 
 

@@ -1,8 +1,5 @@
 package com.jikaigg.arraylist;
 
-import org.w3c.dom.ls.LSOutput;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /*
@@ -21,7 +18,6 @@ public class ArrayListDemo4 {
         specialArray(array);
     }
 
-
     public static void specialArray(ArrayList<String> array) {
         System.out.print("{");
         for (int i = 0; i < array.size(); i++) {
@@ -32,6 +28,5 @@ public class ArrayListDemo4 {
             }
         }
         System.out.println("}");
-
     }
 }

@@ -1,9 +1,9 @@
 package com.jikaigg.jstatic;
 
 public class Phone {
-    private String color;// 颜色
-    private int age;// 机龄
-    private boolean smart;// 是否为智能机
+    private String color;  // 颜色
+    private int age;  // 机龄
+    private boolean smart;  // 是否为智能机
 
     static {
         System.out.println("=!=!=!=!=!=!=");

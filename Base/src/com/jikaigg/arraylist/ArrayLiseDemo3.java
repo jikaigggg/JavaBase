@@ -21,12 +21,13 @@ public class ArrayLiseDemo3 {
         s1.add(ss4);
         s1.add(ss5);
         s1.add(ss6);
+        // 传统for循环遍历
         for (int i = 0; i < 6; i++) {
             System.out.println("姓名是：" + s1.get(i).getName() + "    年龄是" + s1.get(i).getAge());
         }
     }
 
-    //创建学生类
+    // 创建学生类
     public static class Student {
         private String name;
         private int age;

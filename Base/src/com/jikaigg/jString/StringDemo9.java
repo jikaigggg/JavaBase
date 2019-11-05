@@ -27,7 +27,7 @@ public class StringDemo9 {
                 countLower++;
             }else if('0'<=ch&&ch<='9'){
                 countNumber++;
-            }else{
+            } else {
                 countOther++;
             }
         }
@@ -35,8 +35,5 @@ public class StringDemo9 {
         System.out.println("小写字母有："+countLower+"个");
         System.out.println("数字有："+countNumber+"个");
         System.out.println("其他字符有："+countOther+"个");
-
-
     }
-
 }
