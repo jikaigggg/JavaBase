@@ -1,8 +1,8 @@
 package com.jikaigg.arraylist;
 
 /*
- * 用一个大集合存入20个随机数组，然后筛选其中的偶数元素，放到小集合当中
- * */
+  用一个大集合存入20个随机数组，然后筛选其中的偶数元素，放到小集合当中
+*/
 
 import java.util.ArrayList;
 

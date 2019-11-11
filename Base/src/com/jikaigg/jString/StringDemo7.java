@@ -1,11 +1,11 @@
 package com.jikaigg.jString;
 
 /*
- * 字符串的分割方法：
- *   public String[] split(String regex):按照参数的规则，将字符串切分成为若干部分
- * 注意事项：
- *   split方法的参数其实是一个正则表达式，如果按照英文句号切分必须写"\\."(两个反斜杠)
- * */
+  字符串的分割方法：
+    public String[] split(String regex):按照参数的规则，将字符串切分成为若干部分
+  注意事项：
+    split方法的参数其实是一个正则表达式，如果按照英文句号切分必须写"\\."(两个反斜杠)
+*/
 public class StringDemo7 {
     public static void main(String[] args) {
         String s1 = "aaa,bbb,ccc!";

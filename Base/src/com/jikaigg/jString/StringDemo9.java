@@ -3,11 +3,11 @@ package com.jikaigg.jString;
 import java.util.Scanner;
 
 /*
-* 键盘输入一个字符串，并且统计其中各种字符出现的次数
-* 种类有：大写字母，小写字母，其他
-*
-* ????如果输入的字符串之间带空格，长度统计的有异常
-* */
+ 键盘输入一个字符串，并且统计其中各种字符出现的次数
+ 种类有：大写字母，小写字母，其他
+
+ ????如果输入的字符串之间带空格，长度统计的有异常
+*/
 public class StringDemo9 {
     public static void main(String[] args) {
         System.out.println("请输入你要分析的字符串：");

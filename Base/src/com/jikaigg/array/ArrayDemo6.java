@@ -3,9 +3,9 @@ package com.jikaigg.array;
 import java.util.Arrays;
 
 /*
- * 实用API：
- *
- * */
+  实用API：
+
+*/
 public class ArrayDemo6 {
     public static void main(String[] args) {
         int[] arrayA = {5, 9, 1, 2, 7, 3, 8};

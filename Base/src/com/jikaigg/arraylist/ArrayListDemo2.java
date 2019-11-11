@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.Random;
 
 /*
- * 练习一：
- *   生成6个1~33的随机数，并添加到集合，遍历集合
- * */
+  练习一：
+    生成6个1~33的随机数，并添加到集合，遍历集合
+*/
 public class ArrayListDemo2 {
     public static void main(String[] args) {
         // 创建一个集合存放这6个数字

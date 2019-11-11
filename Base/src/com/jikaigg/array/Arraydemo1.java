@@ -1,6 +1,7 @@
-package com.jikaigg.array;/*
- * 使用建议：如果不确定数组中的具体内容，用动态初始化，否则，已经确定了具体内容，用静态初始化
- * */
+package com.jikaigg.array;
+/*
+  使用建议：如果不确定数组中的具体内容，用动态初始化，否则，已经确定了具体内容，用静态初始化
+*/
 
 public class Arraydemo1 {
     public static void main(String[] args) {

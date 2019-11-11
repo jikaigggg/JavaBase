@@ -3,9 +3,9 @@ package com.jikaigg.array;
 import java.util.ArrayList;
 
 /*
- * 需求：
- *   定义一个类，求出数组中最大的两个数
- * */
+  需求：
+    定义一个类，求出数组中最大的两个数
+*/
 public class ArrayDemo7 {
     public static void main(String[] args) {
         ArrayList<Integer> aaa = new ArrayList<>();

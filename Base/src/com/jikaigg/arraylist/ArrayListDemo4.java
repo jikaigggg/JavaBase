@@ -3,8 +3,8 @@ package com.jikaigg.arraylist;
 import java.util.ArrayList;
 
 /*
- * 定义指定格式的打印集合的方法（ArrayList类型作为参数），使用{}括起来，使用@分隔每个元素
- * */
+  定义指定格式的打印集合的方法（ArrayList类型作为参数），使用{}括起来，使用@分隔每个元素
+*/
 public class ArrayListDemo4 {
     public static void main(String[] args) {
         ArrayList<String> array = new ArrayList<>();

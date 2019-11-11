@@ -3,14 +3,14 @@ package com.jikaigg.scanner;
 import java.util.Scanner;
 
 /*
- * 需求1：键盘输入两个int数字，并且求出和
- * 思路：用键盘输入，就要用到Scanner
- *
- * 需求2：输入三个数字，返回最大值
- * */
+  需求1：键盘输入两个int数字，并且求出和
+  思路：用键盘输入，就要用到Scanner
+
+  需求2：输入三个数字，返回最大值
+*/
 public class ScannerDemo2 {
     public static void main(String[] args) {
-        /*Scanner s2 = new Scanner(System.in);
+         /*Scanner s2 = new Scanner(System.in);
         System.out.println("请输入第一个数字：");
         int a = s2.nextInt();
         System.out.println("请输入第二个数字：");

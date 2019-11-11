@@ -3,8 +3,8 @@ package com.jikaigg.arraylist;
 import java.util.ArrayList;
 
 /*
- * 自定义四个学生对象，添加到集合中并遍历
- * */
+  自定义四个学生对象，添加到集合中并遍历
+*/
 public class ArrayLiseDemo3 {
     public static void main(String[] args) {
         ArrayList<Student> s1 = new ArrayList<Student>();

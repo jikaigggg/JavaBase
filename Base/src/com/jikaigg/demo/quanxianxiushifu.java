@@ -1,5 +1,5 @@
 package com.jikaigg.demo;
-/*
+ /*
 Java中有四种权限修饰符：
             public  -->  protected  -->  (default)  -->  private
 同一个类        yes           yes             yes         yes
