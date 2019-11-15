@@ -5,4 +5,5 @@ package com.jikaigg.base.innerclass.hongbao;
 
 */
 public class BootStrap {
+    
 }
