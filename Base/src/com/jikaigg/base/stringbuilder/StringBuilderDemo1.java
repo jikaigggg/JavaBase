@@ -12,7 +12,7 @@ StringBuilder类
 */
 public class StringBuilderDemo1 {
     public static void main(String[] args) {
-        // StringBuilder()  构造一个不带任何字符的字符串生成器，其出事容量为16个字符串
+        // StringBuilder()  构造一个不带任何字符的字符串生成器，其初始容量为16个字符串
         StringBuilder sb1 = new StringBuilder();
         System.out.println("sb1:" + sb1);  // sb1:
 

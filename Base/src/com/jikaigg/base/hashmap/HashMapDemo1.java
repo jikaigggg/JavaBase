@@ -24,5 +24,12 @@ public class HashMapDemo1 {
             // 反着取，先put进去的后get出来
             System.out.println(hm.get(i));
         }
+        // 移除key所对应的value，并返回value
+        String s = hm.remove("yao");
+        System.out.println(s);
+        for (String j : hm.keySet()) {
+            System.out.println(j);
+            System.out.println(hm.get(j));
+        }
     }
 }
