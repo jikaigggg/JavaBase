@@ -1,10 +1,7 @@
 package com.jikaigg.jdbc;
 
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class JDBCDemo1 {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
@@ -19,6 +16,13 @@ public class JDBCDemo1 {
         // 2.获取数据库连接
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jikaigg?urlSSL=false", "root", "123456");
         Statement stmt = conn.createStatement();
-        System.out.println(stmt);
+//        System.out.println(stmt);
+        ResultSet rs = stmt.executeQuery("select * from test;");
+        System.out.println(rs);
+        while (rs.next()){
+            System.out.println(rs.getInt("Id")+rs.getString("Name")+rs.getInt("Age"));
+        }
+        stmt.close();
+        conn.close();
     }
 }
