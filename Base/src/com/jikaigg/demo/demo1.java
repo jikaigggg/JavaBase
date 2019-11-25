@@ -1,4 +1,4 @@
-package com.jikaigg.base.demo;
+package com.jikaigg.demo;
 
 public class demo1 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.jikaigg.base.demo;
+package com.jikaigg.demo;
  /*
 Java中有四种权限修饰符：
             public  -->  protected  -->  (default)  -->  private
