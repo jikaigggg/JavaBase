@@ -17,7 +17,7 @@ public class Demo01 {
             // 定义一个flag标记判断情况
             boolean flag = true;
             // 内层循环循环3 到 该数本身-1的数
-            for (int j = 3; j < (i/2); j++) {
+            for (int j = 2; j < (i / 2); j++) {
                 // 判断外循环对内循环取余，如果 == 0 则证明能整除，非素数
                 if (i % j == 0) {
                     // 如果能被整出，flag标记为false
@@ -25,7 +25,7 @@ public class Demo01 {
                 }
             }
             // 统计过完循环flag仍为true
-            if(flag ==true){
+            if (flag == true) {
                 // 计数器+1
                 count++;
                 // 将i添加进ArrayList中

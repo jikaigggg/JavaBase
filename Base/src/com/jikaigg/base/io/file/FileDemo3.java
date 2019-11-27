@@ -23,8 +23,10 @@ public class FileDemo3 {
         无论路径是绝对的还是相对的，getAbsolutePath()返回的都是绝对路径
      */
     private static void method1() {
-        // 传绝对路径
-        File f1 = new File("/home/jikaigg/git/JavaBase/README.md");
+        // 传绝对路径(Ubuntu下)
+        // File f1 = new File("/home/jikaigg/git/JavaBase/README.md");
+        // 传绝对路径(Windows下)
+        File f1 = new File("D:\\githuby\\JavaBase\\README.md");
         String absolutePath1 = f1.getAbsolutePath();
         System.out.println(absolutePath1);
         // 传相对路径
@@ -77,7 +79,8 @@ public class FileDemo3 {
      */
     private static void method4() {
         // 绝对路径获取文件的大小，下面例子返回了10
-        File f7 = new File("/home/jikaigg/git/JavaBase/README.md");
+        // File f7 = new File("/home/jikaigg/git/JavaBase/README.md");
+        File f7 = new File("D:\\githuby\\JavaBase\\README.md");
         long length1 = f7.length();
         System.out.println(length1);
 
@@ -86,16 +89,16 @@ public class FileDemo3 {
         long length2 = f8.length();
         System.out.println(length2);
 
-        // 文件是一个目录，返回值不确定，Linux下返回了4096，有的地方说会返回0
-        File f9 = new File("/home/jikaigg/git/JavaBase");
+        // 文件是一个目录，返回值不确定，Linux下返回了4096，有的地方说会返回0(Windows下返回了0)
+        // File f9 = new File("/home/jikaigg/git/JavaBase");
+        File f9 = new File("D:\\githuby\\JavaBase");
         long length3 = f9.length();
         System.out.println(length3);
 
         // 文件不存在，返回0
-        File f10 = new File("/home/jikaigg/git/JavaBase/yaojikai.txt");
+        // File f10 = new File("/home/jikaigg/git/JavaBase/yaojikai.txt");
+        File f10 = new File("D:\\githuby\\JavaBase\\yaojikai.md");
         long length4 = f10.length();
         System.out.println(length4);
-
-
     }
 }
