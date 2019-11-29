@@ -1,6 +1,8 @@
 package com.jikaigg.base.io.file;
 
 import java.io.File;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 /*
 FileFilter接口：用于抽象路径名的过滤器
@@ -22,9 +24,16 @@ File[] listFiles(FilenameFilter filter)
 */
 public class FIleDemo7 {
     public static void main(String[] args) {
-        File f = new File("/home/jikaigg/git");
-        method3(f);
+        // File f = new File("/home/jikaigg/git");
+        File f = new File("D:\\test");
+        // method3(f);
+        method2(f);
     }
+
+    private static void method2(File f) {
+        new FileFilterImpl().accept(f);
+    }
+
     private static void method3(File dir) {
         File[] f = dir.listFiles(new FileFilterImpl());
         for (File file : f) {

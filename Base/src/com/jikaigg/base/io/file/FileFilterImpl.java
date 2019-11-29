@@ -9,6 +9,14 @@ import java.io.FileFilter;
 public class FileFilterImpl implements FileFilter {
     @Override
     public boolean accept(File pathname) {
+        File[] f = pathname.listFiles();
+        for (File file : f) {
+            if (file.getName().endsWith(".txt")) {
+                return true;
+            } else {
+                return accept(file);
+            }
+        }
         return true;
     }
 }

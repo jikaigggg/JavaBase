@@ -42,7 +42,7 @@ public class FileDemo5 {
         System.out.println(mkdir1);
     }
 
-    // public booleanmkdirs()：创建由此File表示的目录包括任何必需但不存在的父目录
+    // public boolean mkdirs()：创建由此File表示的目录包括任何必需但不存在的父目录
     private static void method4() {
         // 创建多级目录,也可创建一个文件夹
         File f4 = new File("D:\\yaojikaitest");
