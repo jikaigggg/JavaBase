@@ -17,6 +17,7 @@ public class StringDemo9 {
         int countLower = 0;
         int countNumber = 0;
         int countOther = 0;
+
         System.out.println("字符串的长度是："+str.length());
         char[] charArray = str.toCharArray();
         for (int i = 0; i < charArray.length; i++) {
