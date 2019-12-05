@@ -21,4 +21,7 @@ bufferedInputStream:字节缓冲输出流
 
 */
 public class BufferDemo2 {
+    public static void main(String[] args) {
+
+    }
 }
