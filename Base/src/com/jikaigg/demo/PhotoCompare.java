@@ -3,6 +3,8 @@ package com.jikaigg.demo;
 照片比对程序：
     传入一个照片文件所在的路径，对路径下的所有照片进行两两比对，并返回是否是相同照片
 */
+
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -16,13 +18,16 @@ public class PhotoCompare {
     }
 
     // 传入文件夹，遍历文件夹，对文件夹中的照片两两比较
+
     public static void fileArr(File f) throws IOException {
         // 定义一个ArrayList用来存放File，注意：只要是Object的子类都能放在List中
         List<File> l = new ArrayList<>();
         // 遍历路径下的文件，并放入数组中
         File[] files = f.listFiles();
         for (File file : files) {
+            // if (file.toString().endsWith(".jpg") || file.toString().endsWith(".png")) {
             l.add(file);
+            // }
         }
         // 双层循环保证数组中的所有文件都能两两作比较
         for (int i = 0; i < l.size(); i++) {
