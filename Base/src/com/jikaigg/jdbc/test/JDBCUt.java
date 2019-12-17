@@ -19,7 +19,7 @@ public class JDBCUt {
             user = p.getProperty("user");
             pwd = p.getProperty("password");
             driver = p.getProperty("driver");
-            Class.forName(driver);
+            Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
