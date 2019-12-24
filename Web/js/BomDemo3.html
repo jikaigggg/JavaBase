@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BomDemo3</title>
+    <!--
+    history
+        1.创建(获取)
+        2.方法
+            back()      加载history列表中的前一个URL
+            forward()   加载history列表中的下一个URL
+            go()        加载history列表中的某个具体的页面
+        3.属性
+            length      返回当前窗口历史列表中的URL记录
+    -->
+</head>
+<body>
+<input id="historyBtn" type="button" value="获取历史记录个数">
+<script>
+    var historyBtn = document.getElementById("historyBtn");
+    historyBtn.onclick = function () {
+        alert(history.length);
+    }
+</script>
+</body>
+</html>

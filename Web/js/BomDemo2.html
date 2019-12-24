@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BomDemo2</title>
+    <!--
+    Location：地址栏对象
+        1.创建(获取)
+        2.方法
+            reload()    重新加载当前文档，刷新
+        3.属性
+            href        设置或返回完整的URL
+    -->
+</head>
+<body>
+<input id="reloadBtn" type="button" value="flush">
+<script>
+    //reload方法，定义一个按钮，点击按钮，刷新当前页面
+    //1.获取按钮
+    var reloadBtn = document.getElementById("reloadBtn");
+    reloadBtn.onclick = function () {
+        location.reload();
+    }
+    //获取href
+    var href = location.href;
+    alert(href)
+</script>
+</body>
+</html>

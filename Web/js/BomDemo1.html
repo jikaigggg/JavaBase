@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BomDemo1</title>
+    <!--
+    window：窗口对象
+        1.创建
+        2.方法
+            1.与弹出框有关的方法：
+                alert()     显示带有一段消息和一个确认按钮的警告框
+                confirm()   显示带有一段消息以及确认按钮和取消按钮的对话框（如果用户点击确认按钮，方法返回true，取消，返回false）
+                prompt()    显示可提示用户输入的对话框（返回值：获取用户输入的值）
+            2.打开/关闭方法
+                close() 关闭浏览器窗口(默认是window调用，如果前边对象发生变化，则会关闭调用对象的浏览器窗口)
+                open()  打开新的浏览器窗口(括号里接网址可以打开指定网页)
+            3.定时器方法
+                setTimeout()    在指定的毫秒数后调用函数或计算表达式
+                                参数：js代码或者方法对象；毫秒值
+                                返回值：返回一个唯一标识，用于取消定时器时闯到clearXxx()的括号里的
+                clearTimeout()  取消有setTimeout()的方法设置的timeout
+                setInterval()   按照指定的周期(以毫秒计)来调用函数或计算表达式
+                clearInterval() 取消由setInterval()设置的timeout
+        3.属性
+            1.获取其他Bom对象
+                history
+                location
+                Navigator
+                Screen
+            2.获取Dom对象
+                document
+        4.特点
+            window对象不需要创建可以直接使用 window使用。window.方法名();
+            window引用可以省略。方法名();
+    -->
+</head>
+<body>
+<input id="openBtn" type="button" value="打开窗口">
+<input id="closeBtn" type="button" value="关闭窗口">
+<script>
+    // 确认框
+    /*var flag=confirm("确定要退出吗？");
+    if (flag){
+        alert("那你走吧");
+    } else {
+        alert("刚才你点错了吧")
+    }*/
+
+    //输入框
+    /*var string = prompt("请输入用户名：");
+    alert(string);*/
+
+    //打开一个新窗口
+    /*var newwin;
+    var openBtn = document.getElementById("openBtn");
+    openBtn.onclick = function(){newwin = open("http://www.baidu.com")};
+    var closeBtn = document.getElementById("closeBtn");
+    closeBtn.onclick = function () {
+        newwin.close();
+    }*/
+
+    //一次性定时器
+    /*var sett = setTimeout(fun,3000);
+    clearTimeout(sett);
+    //循环定时器
+    //setInterval(fun,2000);
+    function fun() {
+        alert("boom")
+    }*/
+
+    //获取history
+    var history = history;
+    alert(history)
+</script>
+</body>
+</html>

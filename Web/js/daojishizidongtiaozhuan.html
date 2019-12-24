@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--倒计时几秒结束后自动跳转到指定的页面-->
+</head>
+<body>
+<span id="time">5</span>秒之后页面跳转。。。。
+<script>
+    var time = document.getElementById("time");
+    var num = 5;
+    function timet() {
+        num--;
+        time.innerHTML = num+"";
+        if (num==0){
+            location.href = "https://www.baidu.com";
+        }
+    }
+    setInterval(timet,1000);
+</script>
+</body>
+</html>

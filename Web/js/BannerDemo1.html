@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BannerDemo1</title>
+</head>
+<body>
+<img id="crayon" src="../img/crayon1.jpeg" alt="crayon">
+<script>
+    /*
+    * 分析：
+    *   1.在页面上使用img标签展示图片
+    *   2.定义一个方法，修改图片对象的src属性
+    *   3.定义一个定时器，每隔3秒调用方法一次
+    * */
+    // 修改图片对象的src属性
+    var x = 1;
+    function changeImg() {
+        x++;
+        var img = document.getElementById("crayon");
+        img.src = "../img/crayon"+(x%3+1)+".jpeg";
+    }
+    setInterval(changeImg,3000);
+</script>
+</body>
+</html>
