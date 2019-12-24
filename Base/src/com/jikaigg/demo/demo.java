@@ -1,14 +1,11 @@
 package com.jikaigg.demo;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-import org.w3c.dom.ls.LSOutput;
-
 public class demo {
-    @Override
-    public boolean equals(Object obj) {
-        if(this == obj){
-            return true;
-        }
-        return false;
+    public static void main(String[] args) {
+        String s = "yaojikai";
+        int[] i = {1,2,3};
+        System.out.println(s.length());
+        System.out.println(i.length);
     }
+
 }
