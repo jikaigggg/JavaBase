@@ -10,16 +10,100 @@ Dom：
     W3c Dom标准被分为三个不同的部分：
         核心 DOM  针对任何结构化文档的标准模型
             Document：   文档对象
+                1.创建(获取)：在html dom模型中可以使用window对象来获取
+                    1.window.document
+                    2.document
+                2.方法：
+                    1.获取Element对象：
+                        1.getElementById():         根绝id属性值获取元素对象。id属性值一般唯一
+                        2.getElementByTagName():    根据元素名称获取元素对象们，返回值是一个数组
+                        3.getElementByClassName():  根据Class属性值获取元素对象们
+                        4.getElementsByName():      根据name属性值获取元素对象们，返回值是一个数组
+                    2.创建其他DOM对象：
+                        createAttribute(name)
+                        createComment()
+                        createElement()
+                        createTextNode()
+                3.属性：
             Element：    元素对象
+                1.创建/获取：通过document来获取和创建
+                2.方法：
+                    1.removeAttribute():删除属性
+                    2.setAttribute():设置属性
             Attribute：  属性对象
             Text：       文本对象
             Comment：    注释对象
             Node：       节点对象，其他5个的父对象
+                特点：所有dom对象都可以被认为是一个节点
+                方法：CRUD
+                    appendChild():向节点的子节点列表的结尾添加新的子节点。
+                    removeChild():删除(并返回)当前节点的指定子节点
+                    replaceChild():用新节点替换一个子节点
+                属性：
+                    parentNode：返回当前节点的父节点
         XML DOM   针对XML文档的标准模型
         HTML DOM  针对HTML文档的标准模型
 -->
+
+    <style>
+        div{
+
+        }
+    </style>
+
 </head>
 <body>
+<div id="div1">div1</div>
+<div id="div2">div2</div>
+<div id="div3">div3</div>
+<div class="div4">div4</div>
+<div class="div5">div5</div>
+<input type="text" name="username">
+<a>点点点</a>
+<input type="button" id="setBtn" value="设置href">
+<input type="button" id="remoBtn" value="删除href">
 
+<div id="div6">
+    <div id="div11">
+        div11
+    </div>
+    div6</div>
+<!--<a id="del" href="">删除子节点</a>-->
+<input type="button" id="reBtn" value="删除div11">
+<script>
+    /*var div1 = document.getElementsByTagName("div");
+    //alert(div1.length);
+    var div2 = document.getElementsByClassName("div4");
+    //alert(div2.length);
+    var div3 = document.getElementsByName("username");
+    alert(div3);*/
+
+    /*var setBtn = document.getElementById("setBtn");
+    setBtn.onclick = function () {
+        var aa = document.getElementsByTagName("a")[0];
+        aa.setAttribute("href","https://www.baidu.com");
+    }
+    var remoBtn = document.getElementById("remoBtn");
+    remoBtn.onclick = function () {
+        var aa = document.getElementsByTagName("a")[0];
+        aa.removeAttribute("href");
+    }*/
+
+    //1.获取超链接
+    var aaa = document.getElementById("reBtn");
+    //2.绑定单击事件
+    aaa.onclick = function () {
+        var div6 = document.getElementById("div6");
+        var div11 = document.getElementById("div11");
+        div6.removeChild(div11)
+    }
+    /*
+    * 超链接功能：
+    *   1.可以被点击：样式
+    *   2.点击之后跳转到href指向的url
+    * 需求：保留1功能，去掉2功能
+    * 实现：href="javascript:void(0);"
+    * */
+</script>
 </body>
 </html>
