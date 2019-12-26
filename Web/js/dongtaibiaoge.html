@@ -25,6 +25,7 @@
     <input type="text" id="name" placeholder="请输入姓名">
     <input type="text" id="number" placeholder="请输入电话号码">
     <input type="button" id="addBtn" value="添加">
+    <input type="button" id="addBtnk" value="添加k">
 </div>
 <table>
     <caption>信息表</caption>
@@ -32,20 +33,94 @@
         <th>编号</th>
         <th>姓名</th>
         <th>电话号码</th>
+        <th>删除</th>
     </tr>
     <tr>
         <td>1</td>
         <td>么济恺</td>
         <td>15233340551</td>
+        <td><a href="javascript:void(0);" onclick="delTr(this)">删除</a></td>
     </tr>
     <tr>
         <td>2</td>
         <td>石梦宇</td>
         <td>15930739561</td>
+        <td><a href="javascript:void(0);" onclick="delTr(this)">删除</a></td>
     </tr>
 </table>
 <script>
+/*
+* 分析：
+*   1.添加：
+*       1.给添加按钮绑定单击事件
+*       2.获取文本框的内容
+*       3.创建td，设置td的文本为文本框的内容
+*       4.创建tr
+*       5.将td添加到tr中
+*       6.获取table，将tr添加到table中
+*   2.删除：
+*       1.确定点击的是哪一个超链接
+*       <td><a href="javascript:void(0);" onclick="delTr(this)">删除</a></td>
+*       2.删除：removeChild()通过父节点获取
+*       3.
+*       4.
+* */
+//1.给添加按钮绑定单击事件
+document.getElementById("addBtn").onclick = function () {
+    //2.获取文本框的内容
+    var id = document.getElementById("id").value;
+    var name = document.getElementById("name").value;
+    var number = document.getElementById("number").value;
+    //3.创建td，设置td的文本为文本框的内容
+    var td_id = document.createElement("td");
+    var text_id = document.createTextNode(id);
+    td_id.appendChild(text_id);
 
+    var td_name = document.createElement("td");
+    var text_name = document.createTextNode(name);
+    td_name.appendChild(text_name);
+
+    var td_number = document.createElement("td");
+    var text_number = document.createTextNode(number);
+    td_number.appendChild(text_number);
+
+    var td_a = document.createElement("td");
+    var ele_a = document.createElement("a");
+    ele_a.setAttribute("href","javascript:void(0);");
+    ele_a.setAttribute("onclick","delTr(this);");
+    var text_a = document.createTextNode("删除");
+    ele_a.appendChild(text_a);
+    td_a.appendChild(ele_a);
+
+    //4.创建tr
+    var tr = document.createElement("tr");
+    //5.将td添加到tr中
+    tr.appendChild(td_id);
+    tr.appendChild(td_name);
+    tr.appendChild(td_number);
+    tr.appendChild(td_a);
+    //6.获取table，将tr添加到table中
+    var table = document.getElementsByTagName("table")[0];
+    table.appendChild(tr)
+};
+    //删除
+    function delTr(obj) {
+        var table = obj.parentNode.parentNode.parentNode;
+        var tr = obj.parentNode.parentNode;
+        table.removeChild(tr);
+    }
+document.getElementById("addBtnk").onclick = function () {
+    //2.获取文本框的内容
+    var id = document.getElementById("id").value;
+    var name = document.getElementById("name").value;
+    var number = document.getElementById("number").value;
+
+    var table = document.getElementsByTagName("table")[0];
+    table.innerHTML += "<td>"+id+"</td>\n" +
+        "        <td>"+name+"</td>\n" +
+        "        <td>"+number+"</td>\n" +
+        "        <td><a href=\"javascript:void(0);\" onclick=\"delTr(this)\">删除</a></td>"
+}
 
 </script>
 </body>
