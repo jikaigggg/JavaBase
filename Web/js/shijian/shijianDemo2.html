@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+    <style>
+        table{
+            border: 1px solid;
+            width: 500px;
+            margin-left: 30%;
+        }
+        th,td{
+            border: 1px solid red;
+            text-align: center;
+        }
+        div{
+            margin-left: 30%;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        //1.在页面加载完之后绑定时间
+        window.onload = function () {
+            //2.给全选按钮绑定单击事件
+            document.getElementById("selectAll").onclick = function () {
+                var cbs = document.getElementsByName("cb");
+                for (var i = 0; i < cbs.length; i++) {
+                    cbs[i].checked = true;
+                }
+            };
+            //3.给全不选按钮绑定单击事件
+            document.getElementById("unSelectAll").onclick = function () {
+                var cbs = document.getElementsByName("cb");
+                for (var i = 0; i < cbs.length; i++) {
+                    cbs[i].checked = false;
+                }
+            };
+            //3.给反选按钮绑定单击事件
+            document.getElementById("selectRev").onclick = function () {
+                var cbs = document.getElementsByName("cb");
+                for (var i = 0; i < cbs.length; i++) {
+                    if (cbs[i].checked == false){
+                        cbs[i].checked = true;
+                    }else{
+                        cbs[i].checked = false
+                    }
+                }
+            }
+            //4.给checkBox绑定单击事件
+            document.getElementById("first").onclick = function () {
+                var cbs = document.getElementsByName("cb");
+                for (var i = 0; i<cbs.length;i++){
+                    if (cbs[0].checked == true){
+                        cbs[i].checked = true;
+                    }else{
+                        cbs[i].checked =false;
+                    }
+                }
+
+            }
+        }
+    </script>
+</head>
+<body>
+
+<table>
+    <caption>学生信息表</caption>
+    <tr>
+        <th><input type="checkbox" name="cb" id="first"> </th>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>手机号</th>
+    </tr>
+    <tr>
+        <th><input type="checkbox" name="cb"> </th>
+        <td>1</td>
+        <td>11</td>
+        <td>111</td>
+    </tr>
+    <tr>
+        <th><input type="checkbox" name="cb"> </th>
+        <td>2</td>
+        <td>22</td>
+        <td>222</td>
+    </tr>
+    <tr>
+        <th><input type="checkbox" name="cb"> </th>
+        <td>3</td>
+        <td>33</td>
+        <td>333</td>
+    </tr>
+</table>
+<div>
+    <input type="button" id="selectAll" value="全选">
+    <input type="button" id="unSelectAll" value="全不选">
+    <input type="button" id="selectRev" value="反选">
+</div>
+</body>
+</html>
