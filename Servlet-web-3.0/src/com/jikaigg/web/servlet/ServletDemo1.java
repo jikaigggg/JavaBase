@@ -1,22 +1,25 @@
 package com.jikaigg.web.servlet;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 
+// @WebServlet(urlPatterns = "/demo1")
+@WebServlet("/demo1")
 public class ServletDemo1 implements Servlet {
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
-        System.out.println("初始化！！");
+
     }
 
     @Override
     public ServletConfig getServletConfig() {
         return null;
     }
-    // 提供服务的方法
+
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
-        System.out.println("Servlet jikaigg");
+        System.out.println("web3.0……");
     }
 
     @Override
@@ -26,6 +29,6 @@ public class ServletDemo1 implements Servlet {
 
     @Override
     public void destroy() {
-        System.out.println("销毁！！");
+
     }
 }

@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Base/Base.iml" filepath="$PROJECT_DIR$/Base/Base.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JavaBase.iml" filepath="$PROJECT_DIR$/.idea/JavaBase.iml" />
       <module fileurl="file://$PROJECT_DIR$/Servlet/Servlet.iml" filepath="$PROJECT_DIR$/Servlet/Servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Servlet-web-3.0/Servlet-web-3.0.iml" filepath="$PROJECT_DIR$/Servlet-web-3.0/Servlet-web-3.0.iml" />
       <module fileurl="file://$PROJECT_DIR$/Web/Web.iml" filepath="$PROJECT_DIR$/Web/Web.iml" />
     </modules>
   </component>
