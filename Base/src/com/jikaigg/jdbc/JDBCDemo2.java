@@ -14,10 +14,10 @@ public class JDBCDemo2 {
         final String username;
         final String password;
         Properties p = new Properties();
-        p.load(new FileInputStream("config.properties"));
+        p.load(new FileInputStream("D:\\githuby\\JavaBase\\Base\\src\\com\\jikaigg\\jdbc\\druid.properties"));
         driver = p.getProperty("driverClassName");
         url = p.getProperty("url");
-        username = p.getProperty("userName");
+        username = p.getProperty("name");
         password = p.getProperty("password");
         Class.forName(driver);
         Connection conn  = DriverManager.getConnection(url,username,password);

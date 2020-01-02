@@ -14,7 +14,7 @@ import java.util.Properties;
 
 public class JDBCDemo8 {
     public static void main(String[] args){
-        String confile = "druid.properties";//配置文件名称
+        String confile = "com/jikaigg/jdbc/druid.properties";//配置文件名称
         Properties pp = new Properties();
         InputStream inputStream = null;
         JDBCDemo8 druidTest = new JDBCDemo8();

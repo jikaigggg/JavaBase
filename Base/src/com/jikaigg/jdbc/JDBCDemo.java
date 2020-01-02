@@ -38,7 +38,7 @@ public class JDBCDemo {
     public static void main(String[] args) throws Exception {
         // 加载配置文件
         Properties p = new Properties();
-        InputStream in = JDBCDemo.class.getClassLoader().getResourceAsStream("druid.properties");
+        InputStream in = JDBCDemo.class.getClassLoader().getResourceAsStream("com/jikaigg/jdbc/druid.properties");
         p.load(in);
         //获取连接池对象
         DataSource ds = DruidDataSourceFactory.createDataSource(p);
