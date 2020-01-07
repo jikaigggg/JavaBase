@@ -11,6 +11,7 @@ import java.io.IOException;
 
 @WebServlet("/successServlet")
 public class successServlet extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // 获取request域中共享的数据
         User user = (User) request.getAttribute("user");
@@ -23,6 +24,7 @@ public class successServlet extends HttpServlet {
         }
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doPost(request, response);
     }

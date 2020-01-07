@@ -9,6 +9,7 @@ import java.io.IOException;
 
 @WebServlet("/failServlet")
 public class failServlet extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // 给页面谢一句话
         // 设置编码
@@ -17,6 +18,7 @@ public class failServlet extends HttpServlet {
         response.getWriter().write("登陆失败！用户名或密码错误！");
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doPost(request, response);
     }
