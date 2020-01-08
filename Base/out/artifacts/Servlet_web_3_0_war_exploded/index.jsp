@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.SimpleDateFormat" %><%--
   Created by IntelliJ IDEA.
   User: yaojikai
   Date: 2019/12/31
@@ -20,18 +21,53 @@ JSP的脚本：JSP定义java代码的方式
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
+<head>
     <title>$Title$</title>
-  </head>
-  <body>
-  <%
-    System.out.println("helloworld");
-  %>
+</head>
+<body>
+<%
+    //    System.out.println("helloworld");
+%>
+<%
+    // 1.获取所有的cookie
+    Cookie[] cookies = request.getCookies();
+    System.out.println("111");
+    // 2.遍历cookie数组
+    if (cookies != null) {
+        // 3.获取cookie名称
+        for (Cookie cookie : cookies) {
+            String name = cookie.getName();
+            System.out.println(222);
+            // 4.判断名称是否是lastTime
+            if ("lastTime".equals(name)) {
+                //有该cookie，不是第一次访问
+                System.out.println("333");
+                // 设置cookie的value
+                // 获取当前时间的字符串，重新设置cookie的值，重新发送cookie
+                Date date = new Date();
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日--HH:mm:ss");
+                String time = sdf.format(date);
+                cookie.setValue(time);
+                //设置cookie的存活时间
+                cookie.setMaxAge(60 * 60 * 24);
+                response.addCookie(cookie);
+                // 相应数据
+                // 获取cooklie的value
+                String value = cookie.getValue();
+                out.write("<h1>欢迎回来，上次访问的时间是</h1>" + value);
+            }
+        }
+    } else {
+      System.out.println("444");
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日--HH:mm:ss");
+        String time = sdf.format(date);
+        Cookie cookie = new Cookie("lastTime", "'" + time + "'");
+        cookie.setMaxAge(60 * 60 * 24);
+        response.addCookie(cookie);
+        out.write("<h1>欢迎</h1>");
+    }
+%>
 
-  <%!
-    String Title = "lalala";
-
-  %>
-  hello
-  </body>
+</body>
 </html>
