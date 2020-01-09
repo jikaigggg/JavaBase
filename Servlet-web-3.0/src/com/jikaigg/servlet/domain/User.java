@@ -6,6 +6,15 @@ public class User {
     private int id;
     private String name;
 
+    public User() {
+    }
+
+    public User(int id, String name, Date birthday) {
+        this.id = id;
+        this.name = name;
+        this.birthday = birthday;
+    }
+
     @Override
     public String toString() {
         return "User{" +
