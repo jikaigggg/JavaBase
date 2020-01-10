@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/Servlet-end/Servlet-end.iml" filepath="$PROJECT_DIR$/Servlet-end/Servlet-end.iml" />
       <module fileurl="file://$PROJECT_DIR$/Servlet-web-3.0/Servlet-web-3.0.iml" filepath="$PROJECT_DIR$/Servlet-web-3.0/Servlet-web-3.0.iml" />
       <module fileurl="file://$PROJECT_DIR$/Web/Web.iml" filepath="$PROJECT_DIR$/Web/Web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day17_case/day17_case.iml" filepath="$PROJECT_DIR$/day17_case/day17_case.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
     </modules>
   </component>
