@@ -28,7 +28,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public User findUserByUsernameAndPassword(String username, String password) {
         try {
-            String sql = "select * from user where username = ? and password = ?";
+            String sql = "select * from `user` where username = ? and password = ?";
             User user = template.queryForObject(sql, new BeanPropertyRowMapper<User>(User.class), username, password);
             return user;
         } catch (DataAccessException e) {
@@ -38,32 +38,32 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void add(User user) {
-        String sql = "insert into user values(null,?,?,?,?,?,?,null,null)";
+        String sql = "insert into `user` values(null,?,?,?,?,?,?,null,null)";
         template.update(sql, user.getName(), user.getGender(), user.getAge(), user.getAddress(), user.getQq(), user.getEmail());
     }
 
     @Override
     public void delete(int id) {
-        String sql = "delete from user where id = ?";
+        String sql = "delete from `user` where id = ?";
         template.update(sql, id);
     }
 
     @Override
     public User findById(int i) {
-        String sql = "select * form user where id = ?";
+        String sql = "select * from `user` where id = ?";
         return template.queryForObject(sql, new BeanPropertyRowMapper<User>(User.class), i);
     }
 
     @Override
     public void update(User user) {
-        String sql = "update user set name = ?, gender = ?, age = ?, address = ?, qq = ?, email = ? where id = ?";
+        String sql = "update `user` set name = ?, gender = ?, age = ?, address = ?, qq = ?, email = ? where id = ?";
         template.update(sql, user.getName(), user.getGender(), user.getAge(), user.getAddress(), user.getQq(), user.getEmail(), user.getId());
     }
 
     @Override
     public int findTotalCount(Map<String, String[]> condition) {
         // 定义模板初始化sql
-        String sql = "select count(*) from user where 1 = 1";
+        String sql = "select count(*) from `user` where 1 = 1";
         StringBuilder sb = new StringBuilder(sql);
         // 遍历Map
         Set<String> keySet = condition.keySet();
@@ -91,7 +91,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public List<User> findByPage(int start, int rows, Map<String, String[]> condition) {
-        String sql = "select * from user where 1 = 1";
+        String sql = "select * from `user` where 1 = 1";
         StringBuilder sb = new StringBuilder(sql);
         //2.遍历map
         Set<String> keySet = condition.keySet();
