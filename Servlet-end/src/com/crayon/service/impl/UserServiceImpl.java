@@ -20,7 +20,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User login(User user) {
-        return dao.findUserByUsernameAndPassword(user.getUsername(),user.getPassword());
+        return dao.findUserByUsernameAndPassword(user.getUsername(), user.getPassword());
     }
 
     @Override
@@ -45,7 +45,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void delSelectUser(String[] ids) {
-        if (ids != null && ids.length > 0){
+        if (ids != null && ids.length > 0) {
             // 1.遍历数组
             for (String id : ids) {
                 // 2.调用dao删除
@@ -54,9 +54,32 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+
     @Override
-    public PageBean<User> findUserByPage(String currentPage, String rows, Map<String, String[]> condition) {
-        return null;
+    public PageBean<User> findUserByPage(String _currentPage, String _rows) {
+        int currentPage = Integer.parseInt(_currentPage);
+        int rows = Integer.parseInt(_rows);
+        if (currentPage <= 0) {
+            currentPage = 1;
+        }
+        // 创建一个空的PageBean对象
+        PageBean<User> pb = new PageBean<User>();
+        // 设置参数
+        pb.setCurrentPage(currentPage);
+        pb.setRows(rows);
+        // 调用dao查询总记录数
+        int totalCount = dao.findTotalCount();
+        pb.setTotalCount(totalCount);
+        //调用dao查询list集合
+        // 计算开始的记录索引
+        int start = (currentPage - 1) * rows;
+        List<User> list = dao.findByPage(start, rows);
+        pb.setList(list);
+
+        //计算总页码
+        int totalPage = totalCount % rows == 0 ? totalCount / rows : totalCount / rows + 1;
+        pb.setTotalPage(totalPage);
+        return pb;
     }
 
 

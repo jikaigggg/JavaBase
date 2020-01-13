@@ -102,7 +102,7 @@ public class UserDaoImpl implements UserDao {
         String sql = "select * from user  where 1 = 1 ";
 
         StringBuilder sb = new StringBuilder(sql);
-        //2.遍历map
+        //2.遍历mapw
         Set<String> keySet = condition.keySet();
         //定义参数的集合
         List<Object> params = new ArrayList<Object>();
