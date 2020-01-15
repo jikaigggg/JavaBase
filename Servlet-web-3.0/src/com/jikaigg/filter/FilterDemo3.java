@@ -17,7 +17,8 @@ import java.io.IOException;
 *   2.web.xml配置，谁配置在上面，谁先执行
 *
 * */
-@WebFilter(filterName = "FilterDemo3")
+//@WebFilter(filterName = "FilterDemo3")
+@WebFilter("/123")
 public class FilterDemo3 implements Filter {
     public void destroy() {
     }

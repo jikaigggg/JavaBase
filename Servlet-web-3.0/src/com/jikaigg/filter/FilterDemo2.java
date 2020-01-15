@@ -16,7 +16,8 @@ import java.io.IOException;
 * */
 
 // 浏览器直接请求资源
-@WebFilter(value = "/index.jsp",dispatcherTypes = DispatcherType.FORWARD)
+// @WebFilter(value = "/index.jsp",dispatcherTypes = DispatcherType.FORWARD)
+@WebFilter("/123")
 public class FilterDemo2 implements Filter {
     public void destroy() {
     }

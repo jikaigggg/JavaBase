@@ -11,7 +11,9 @@ import java.io.IOException;
 *   4.拦截所有资源：  /*  访问所有资源时，过滤器会被执行
  */
 
-@WebFilter("/*")  //访问所有资源之前都会执行该过滤器
+//@WebFilter("/*")  //访问所有资源之前都会执行该过滤器
+
+@WebFilter("/123")
 public class FilterDemo1 implements Filter {
     /*
      * 在服务器启动后，会创建filter对象，然后调用init方法，只执行一次
