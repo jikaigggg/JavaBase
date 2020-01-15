@@ -1,9 +1,25 @@
 package com.jikaigg.json;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import java.util.Date;
+
 public class Person {
     private String name;
     private int age;
     private Boolean gender;
+//    @JsonIgnore  // 忽略该属性
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private Date birthday;
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
 
     public String getName() {
         return name;
@@ -35,6 +51,7 @@ public class Person {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", gender=" + gender +
+                ", birthday=" + birthday +
                 '}';
     }
 }
