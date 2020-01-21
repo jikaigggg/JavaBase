@@ -34,12 +34,9 @@ public class LoginFilter implements Filter {
                 request.getRequestDispatcher("/login.jsp").forward(request,resp);
             }
         }
-
-
     }
 
     public void init(FilterConfig config) throws ServletException {
 
     }
-
 }
